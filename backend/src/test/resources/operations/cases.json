@@ -1,0 +1,50 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "requiredMinutes": "#90",
+      "spareMinutes": "#30"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "partsReady": "NO"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "remainingMinutes": "60"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "spareMinutes": "#-30"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "warrantyValid": "NO"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "travelMinutes": "0",
+      "serviceMinutes": "0"
+    },
+    "expected": {
+      "decision": "PASS",
+      "requiredMinutes": "#0"
+    },
+    "error": false
+  }
+]
